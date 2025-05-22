@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Decouple-Then-Merge: Finetune Diffusion Models as Multi-Task Learning</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,28 +52,44 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Decouple-Then-Merge: <br> Finetune Diffusion Models as Multi-Task Learning</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://mqleet.github.io/" target="_blank">Qianli Ma</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://nics-effalg.com/ningxuefei/" target="_blank">Xuefei Ning</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://shenqildr.github.io/" target="_blank">Dongrui Liu</a><sup>3</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.ustcnewly.com/" target="_blank">Li Niu</a><sup>1,4&#8224</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="http://www.zhanglinfeng.tech/" target="_blank">Linfeng Zhang</a><sup>1&#8224</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">
+                      <sup>1</sup>
+                      Shanghai Jiao Tong University &nbsp;&nbsp;
+                      <sup>2</sup>
+                      Tsinghua University &nbsp;&nbsp;
+                      <br>
+                      <sup>3</sup>
+                      Shanghai AI Laboratory &nbsp;&nbsp;
+                      <sup>4</sup>
+                      miguo.ai &nbsp;&nbsp;
+                      <br>CVPR 2025</span>
+                    <span class="eql-cntrb"><small><br><sup>&#8224</sup>Denotes Corresponding Authors</small></small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/CVPR25_DeMe_main.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -84,7 +100,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/CVPR25_DeMe_supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -95,7 +111,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/MqLeet/DeMe" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +122,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2410.06664" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -124,11 +140,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,8 +152,27 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
+
+
+<!-- teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 60%; max-width: none;">
+      <div class="hero-body">
+            <img src="static/images/cvpr2025_top1.png" style="width:100%; margin-bottom:10px" alt="Teaser."/>
+      <p style="margin-top: 0;">
+        Figure 1: (a) Cosine similarity between gradients at different timesteps on CIFAR10 & distribution
+        of gradients similarity in t ∈ [0, 1000] and t ∈ [0, 250]. Non-adjacent timesteps have low similarity,
+        indicating conflicts during their training. In contrast, adjacent timesteps have similar gradients.
+        (b) & (c): Comparison between the traditional and our training paradigm: The previous paradigm
+        trains one diffusion model on all timesteps, leading to conflicts in different timesteps. Our method
+        addresses this problem by decoupling the training of diffusion models in N different timestep ranges.     
+       </p>
+    </div>
+  </div>
+</section>
+<!-- End teaser -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +182,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Diffusion models are trained by learning a sequence of models that reverse each step of noise corruption. Typically, the model parameters are fully shared across multiple timesteps to enhance training efficiency. However, since the denoising tasks differ at each timestep, the gradients computed at different timesteps may conflict, potentially degrading the overall performance of image generation. To solve this issue, this work proposes a <strong>De</strong>couple-then-<strong>Me</strong>rge (<strong>DeMe</strong>) framework, which begins with a pretrained model and finetunes separate models tailored to specific timesteps. We introduce several improved techniques during the finetuning stage to promote effective knowledge sharing while minimizing training interference across timesteps. Finally, after finetuning, these separate models can be merged into a single model in the parameter space, ensuring efficient and practical inference. Experimental results show significant generation quality improvements upon 6 benchmarks including Stable Diffusion on COCO30K, ImageNet1K, PartiPrompts, and DDPM on LSUN Church, LSUN Bedroom, and CIFAR10. Code is available at <a href="https://github.com/MqLeet/DeMe" target="_blank">GitHub</a>.
           </p>
         </div>
       </div>
@@ -158,39 +192,75 @@
 <!-- End paper abstract -->
 
 
+<!-- Method Overview -->
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 70%; max-width: none;">
+      <div class="hero-body">
+            <img src="static/images/cvpr2025_method.png" style="width:100%; margin-bottom:10px" alt="Teaser."/>
+      <p style="margin-top: 0;">
+        Figure 2: Pipeline of our framework. The following training techniques are incorporated into the
+        finetuning process: <strong>Consistency loss</strong> preserves the original knowledge of diffusion models learned
+        at all timesteps by minimizing the difference between pre-finetuned and post-finetuned diffusion
+        models. <strong>Probabilistic sampling strategy</strong> samples from both the corresponding and other timesteps
+        with different probabilities, helping the diffusion model overcome forgetting knowledge from other
+        timesteps. <strong>Channel-wise projection</strong> enables the diffusion model to directly capture the feature
+        difference in channel dimension. <strong>Model merging scheme</strong> merges the parameters of all the finetuned
+        models into one unified model to promote the knowledge sharing across different timestep ranges.
+        </p>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Method Overview -->
+
+
+
+
 <!-- Image carousel -->
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Qualitative Results on Text-to-Image Generation</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/cvpr2025_quality1.png"  alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Qualitative comparison between our method and the original Stable Diffusion on various prompts.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/cvpr2025_quality2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Qualitative comparison between our method and the original Stable Diffusion on various prompts.
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Qualitative Results on Unconditional Image Generation</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/cvpr2025_quality3.png" style="width:100%; margin-bottom:10px" alt="Unconditional generation results"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison between our method and the original Stable Diffusion on various prompts.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/cvpr2025_quality4.png" style="width:100%; margin-bottom:10px" alt="Unconditional generation results"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+          Qualitative comparison between our method and the original Stable Diffusion on various prompts.
+        </h2>
+      </div>
   </div>
 </div>
 </div>
@@ -278,7 +348,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code> @InProceedings{ma2024decouple,
+        title={Decouple-Then-Merge: Towards Better Training for Diffusion Models},
+        author={Ma, Qianli and Ning, Xuefei and Liu, Dongrui and Niu, Li and Zhang, Linfeng},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        year={2025}
+        }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
