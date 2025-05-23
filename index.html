@@ -220,7 +220,7 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container" style="width: 70%; max-width: none;">
       <h2 class="title is-3">Qualitative Results on Text-to-Image Generation</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
@@ -244,19 +244,19 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container" style="width: 70%; max-width: none;">
       <h2 class="title is-3">Qualitative Results on Unconditional Image Generation</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/cvpr2025_quality3.png" style="width:100%; margin-bottom:10px" alt="Unconditional generation results"/>
+        <img src="static/images/cvpr2025_quality3.png"  alt="Unconditional generation results"/>
         <h2 class="subtitle has-text-centered">
           Qualitative comparison between our method and the original Stable Diffusion on various prompts.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/cvpr2025_quality4.png" style="width:100%; margin-bottom:10px" alt="Unconditional generation results"/>
+        <img src="static/images/cvpr2025_quality4.png"  alt="Unconditional generation results"/>
         <h2 class="subtitle has-text-centered">
           Qualitative comparison between our method and the original Stable Diffusion on various prompts.
         </h2>
@@ -270,50 +270,116 @@
 
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="width: 70%; max-width: none;">
+      <h2 class="title is-3">Quantitative Results</h2>
+      <!-- 使用普通div进行纵向排列 -->
+      <div class="content" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- 第一张图片 -->
+        <div>
+          <img src="static/images/cvpr_table1.png" class="image" style="width:80%; margin-left:100px" alt="Table 1: Quantitative results on text-to-image generation"/>
+          <h2 class="subtitle has-text-centered">
+            Table 1: Quantitative results on text-to-image generation
+          </h2>
+        </div>
+        
+        <!-- 第二张图片 -->
+        <div>
+          <img src="static/images/cvpr_table2.png" class="image" style="width:80%; margin-left:100px" alt="Table 2: Quantitative results on unconditional image generation"/>
+          <h2 class="subtitle has-text-centered">
+            Table 2: Quantitative results on unconditional image generation
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="width: 70%; max-width: none;">
+      <h2 class="title is-3">Why DeMe works?</h2>
+      <!-- 使用普通div进行纵向排列 -->
+      <div class="content" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- 第一张图片 -->
+        <div>
+          <img src="static/images/cvpr_visz1.png" class="image" style="width:80%; margin-left:100px" alt="Table 1: Quantitative results on text-to-image generation"/>
+          <p style="margin-top: 0;">
+            Loss landscape of the pretrained diffusion model in different timestep ranges on CIFAR10. We use dimension reduction methods
+            to handle high-dimensional neural networks. Contour line density reflects the frequency of loss variations (i.e., gradients), with blue
+            representing low loss and red representing high loss. The pretrained model resides at the critical point (with zero gradients) with sparse
+            contour lines for the overall timesteps t ∈ [0, 1000), but when the training process is decoupled, it tends to be located in regions with
+            densely packed contour lines, suggesting that there still exists gradients that enable pretrained model to escape from the critical point.
+            </p>
+
+        </div>
+        
+        <!-- 第二张图片 -->
+        <div>
+          <img src="static/images/cvpr_visz2.png" class="image" style="width:80%; margin-left:100px" alt="Table 2: Quantitative results on unconditional image generation"/>
+          <p style="margin-top: 0;">
+            Loss landscape for applying task vectors. The optimal model parameters are neither the pretrained one nor the finetuned one,
+            but lie within the plane spanned by the task vectors computed in Sec. 3.3. We utilize the pretrained and two finetuned model parameters
+            to obtain the two task vectors, respectively. We compute an orthonormal basis from the plane spanned by the task
+            vectors. Axis denotes the movement direction in the parameter space.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
+
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
+
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
+
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -321,7 +387,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -330,7 +396,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -340,7 +406,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
